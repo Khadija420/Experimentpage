@@ -1,0 +1,414 @@
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.nav-bar {
+    background: transparent;
+    position: absolute;
+    z-index: 3000;
+    right: 0;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: #CC0000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'RubikRegular';
+    text-transform: uppercase;
+    font-weight:bold;
+}
+
+/* Change the link color to white on hover */
+li a:hover {
+ color: #FFFFFF;
+}
+
+.map-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%; 
+}
+
+#map {
+  
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  
+}
+
+.left-sidebar{
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    opacity: 1.0;
+    left: 7px;
+    margin-top: 7px;
+    display: inline-block;
+    padding: 20px;
+    font-size: 1.4em;
+    z-index: 30;
+    background-color: rgba(255,255,255, 0.9);
+}
+
+p { 
+   font-family: 'RubikRegular'; 
+   font-weight: normal; 
+   font-style: normal; 
+}
+.title{
+  color:#B10CFF;
+  font-family:'RubikRegular';
+  font-size:40px;
+  font-weight:bold;
+  margin-top:0px;
+  text-transform: uppercase; 
+}  
+.description{
+  color:black;
+  font-family: 'RubikRegular';
+  font-size:14px;
+}
+
+a{
+  color:#CC0000;
+}
+
+.title-box {
+  width:300px;
+  float: left;
+  margin-left:20px;
+  margin-top: 30px;
+  border:0px;
+}
+
+.page-title {
+  color:#FF7800;
+  font-family:'RubikRegular';
+  font-size:15px;
+  font-weight:bold;
+  margin-top:30px;
+  text-transform: uppercase; 
+  width:500px;
+}
+
+.about-description{
+width:500px}
+
+.publication {
+position: absolute;
+left:600px; 
+margin-top:100px;
+}
+
+a:link {
+    background-color: transparent; 
+    text-decoration: none;
+}
+
+
+
+#tmap {
+  float:right;
+  width: 800px;
+  height: 600px;
+  position:absolute;
+  top: 100px;
+  bottom: 200px;
+  left: 600px;  
+}
+
+.politicaltimeline{
+position: absolute;
+height:50%;
+width:50%;
+top:600px;
+} 
+
+.subtitle-A{
+  color:#CC0000;
+  font-family:'RubikRegular';
+  font-size:14px;
+  font-weight:bold;
+}  
+.subtitle-B{
+  color:#000000;
+  font-family:'RubikRegular';
+  font-size:12px;
+  font-weight:normal;
+}  
+.subtitle-C{
+  color:#000000;
+  font-family:'RubikRegular';
+  font-size:14px;
+  font-weight:normal;
+}  
+
+
+.event-picker {
+    font-family: 'RubikRegular';
+  color: #CC0000; 
+}
+.who-picker {
+    font-family: 'RubikRegular';
+   color: #CC0000; 
+}
+.organization-picker {
+    font-family: 'RubikRegular';
+   color: #CC0000; 
+}
+.project-picker {
+    font-family: 'RubikRegular';
+   color: #CC0000; 
+}
+
+.left-sidebar-content{
+  margin-top:0; 
+}
+.hmap {
+  width: 500px;
+  height: 400px;
+}
+  
+.leaflet-popup-content-wrapper {
+    padding: 1px;
+    text-align: left;
+    border-radius:0px;
+  }
+
+.checkboxes {
+  background: white;
+  padding: 15px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  z-index: 20000;
+}
+
+.sidebar {
+  display: block;
+  font-family:'RubikRegular';
+  background: #eee;
+  opacity: 0.9;
+  float: right;
+  padding: 10px;
+  margin: 15px; 
+  position: fixed; 
+  z-index: 1; 
+  top: 50px; 
+  right: 5px;
+  background-color: #dcdcdc; 
+  box-shadow: 1px 1px 3px #9e9e9e; 
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+.sidebar-footer {
+  margin-top: 75px;
+}
+
+.sidebar-feature-content {
+    font-size: 12px;
+    font-family: 'RubikRegular';
+    font-weight: bold;
+    color: black;
+    margin-top:0; 
+    display: block; 
+    width: 250px;
+   
+}
+
+.sidebar-content {
+  display:none;
+   width: 250px;
+}
+
+.sidebar-button {
+    border: none;
+    background: white;
+    right: 10px; 
+}
+
+/* Customize the label (the container) */
+.container-red {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-top: 5px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: 'RubikRegular';
+  color:#CC0000;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container-red input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark-red {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width:15px;
+  background-color: white;
+  border: 2px solid #CC0000;
+  
+}
+
+/* On mouse-over, add an red background color */
+.container-red:hover input ~ .checkmark-red {
+  background-color: #CC0000;
+}
+
+/* When the checkbox is checked, add a red background */
+.container-red input:checked ~ .checkmark-red {
+  background-color: #CC0000;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark-red:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container-red input:checked ~ .checkmark-red:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-red .checkmark-red:after {
+  left: 4px;
+  top: 0px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+img {
+    width: 100%;
+}
+
+
+h1 {
+    display: block;
+    font-size: 13px;
+  font-family:'RubikRegular';
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #CC0000; 
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+h2 {
+    display: block;
+    font-size: 20px;
+    font-family: 'RubikRegular';
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #CC0000;
+    margin-top:0; 
+   
+}
+
+
+h3 {
+    display: block;
+    font-size: 16px;
+    font-family:'RubikRegular';
+    font-weight: bold;
+    color: #CC0000;
+    text-align: center;
+    margin-top:0; 
+   
+}
+
+h4 {
+    display: block;
+    font-size: 12px;
+    font-family:'RubikRegular';
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    margin-top:0; 
+}
+
+
+h5 {
+    display: block;
+    font-size: 12px;
+    font-family:'RubikRegular';
+    font-weight: normal;
+    color:#CC0000; 
+    text-align: left;
+    margin-top:1px; 
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+
+h6 {
+    display: block;
+    font-size: 12px;
+    font-family:'RubikRegular';
+    font-weight: bold;
+    color: #CC0000;
+    text-align: left;
+    margin-top:2px; 
+    line-height: 1.2;
+}
+.panel-close, .panel-close:focus, .panel-close:hover, .panel-closeactive {
+    color: #000000;
+    text-decoration: none;
+}
+.panel-close {
+    display: inline-block;
+    font-size: 32px;
+    line-height: 32px;
+    height: 32px;
+    width: 32px;
+    color: #CC0000;
+}
+.btn-add, .panel-close {
+    font-family: 'RubikRegular';
+    font-weight: 400;
+}
+.btn-add div, .legend-help, .panel-close {
+    text-align: center;
+}
